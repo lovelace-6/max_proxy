@@ -1,0 +1,211 @@
+// index.jsx styles
+.styledLink {
+  color: #00635D;
+  text-decoration: none;
+  font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
+  cursor: pointer;
+  &:hover {text-decoration: underline};
+  display: inline-block;
+  position: relative;
+  flex-basis: 400px;
+}
+
+.container {
+  float: left;
+  width: 625px;
+  padding-right: 10px;
+  padding-left: 8px;
+}
+
+.search {
+  float: right;
+  color: #333333;
+  background: #FFFFFF;
+}
+
+.searchInput {
+  width: 130px;
+  border: #DCD6CC 1px solid;
+  border-radius: 3px;
+  padding: 5px
+}
+
+.align {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 10px;
+}
+
+
+// AddReview styles:
+.reviewSearch {
+  float: left;
+  background: #FFFFFF;
+  resize: none;
+  margin-top: 40px;
+  margin-left: 70px;
+  font-family: Merriweather, Georgia, serif;
+}
+
+
+.text {
+  border: 1px solid #D6D0C4;
+  border-radius: 5px;
+  &:focus {outline: none; box-shadow:0 0 10px #D6D0C4;}
+}
+
+.submit {
+  background-color: #F4F1EA;
+  border-radius: 3px;
+  color: #333333;
+  height: 35px;
+  width: 100px;
+  float: right;
+  margin-top: 13px;
+  margin-bottom: 30px;
+  margin-right: 5px;
+  border: 1px solid #D6D0C4;
+  box-shadow: 0 0 10px #F4F1EA;
+  cursor: pointer;
+  &:focus {outline: none; box-shadow:0 0 10px #D6D0C4;}
+}
+
+.star {
+  float: right;
+  margin-top: 15px;
+  margin-right: 18px
+}
+
+
+// EachReview style
+.reviewContent {
+  font-family: Merriweather, Georgia, serif;
+  line-height: 21px;
+  font-size: 14px;
+}
+
+.user {
+  color: #00635d;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {text-decoration: underline};
+  cursor: pointer
+}
+
+.userDetails {
+  font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  display: block;
+}
+
+.image {
+  margin-right: 10px;
+  float: left;
+}
+
+.float {
+  float: right;
+  color: #999999;
+}
+
+// Filter styles
+.filterLink {
+  color: #00635d;
+  text-decoration: none;
+  font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
+  cursor: pointer;
+  &:hover {text-decoration: underline};
+  display: inline-block
+}
+
+
+// RatingDetails styles
+.ratingDetailsBar {
+  font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.linkTag {
+  color: #00635D;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {text-decoration: underline};
+}
+
+.ratingHeader {
+  color: #382110;
+  font-weight: 450
+}
+
+.reviewCount {
+  color: #999999;
+}
+
+// ReviewActivity styles
+
+.likeButton {
+  align: center;
+  background-color: #F4F1EA;
+  border-radius: 3px;
+  color: #333333;
+  height: 25px;
+  width: 48px;
+  margin-bottom: 20px;
+  border: 1px solid #D6D0C4;
+  box-shadow: 0 0 10px #F4F1EA;
+  cursor: pointer;
+  &:focus {outline: none; box-shadow:0 0 10px #D6D0C4;}
+}
+
+.likes {
+  color: #00635D;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {text-decoration: underline};
+}
+
+// Tooltip styles
+.toolTipBox {
+  border: 8px solid #D6D0C4;
+  background-color: white;
+  position: absolute;
+  top: 9px;
+  left: -50px;
+  border-radius: 10px;
+  opacity: 1 !important;
+  padding: 8px;
+  width: 500px;
+  z-index: 1
+}
+
+.arrow {
+  position: relative;
+  width: 0;
+  height: 50;
+  border-width: 11px;
+  border-style: solid;
+  border-color:  transparent transparent #D6D0C4 transparent;
+  left: 0px;
+  bottom: 5px
+}
+
+.rating {
+  color: #00635d;
+  text-decoration: none;
+  &:hover {text-decoration: underline};
+  font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+}
+
+.all {
+  color: #999999;
+  text-decoration: none;
+  &:hover {text-decoration: underline};
+  font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+}

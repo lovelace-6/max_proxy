@@ -1,0 +1,50 @@
+#mainContainer {
+  display: grid;
+  grid-template-columns: [col-start] auto [col1] 650px [col2] 340px [col3] auto [col-end];
+  grid-template-rows: [row-start] 100px [row1] auto [row2] auto [row3] 200px [row4] auto [row-end];
+}
+
+.mainInfoBlock {
+  grid-column-start: col1;
+  grid-column-end: col2;
+  grid-row-start: row1;
+  grid-row-end: row2;
+  justify-self: center;
+}
+
+.detailsBlock {
+  grid-column-start: col1;
+  grid-column-end: col2;
+  grid-row-start: row2;
+  grid-row-end: row3;
+  justify-self: end;
+}
+
+.authorBlock {
+  grid-column-start: col2;
+  grid-column-end: col3;
+  grid-row-start: row2;
+  grid-row-end: row-end;
+  justify-self: start;
+  align-self: start;
+}
+
+.reviewsBlock {
+  grid-column-start: col1;
+  grid-column-end: col2;
+  grid-row-start: row4;
+  grid-row-end: row-end;
+  justify-self: center;
+  align-self: start;
+}
+
+.titleBlock {
+  color: #01a1dd;
+  grid-column-start: col1;
+  grid-column-end: col3;
+  grid-row-start: row-start;
+  grid-row-end: row1;
+  justify-self: center;
+  align-self: center;
+  font-weight: 600
+}

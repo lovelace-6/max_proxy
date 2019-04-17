@@ -1,0 +1,65 @@
+{
+  "name": "hrr37-fec-ginger-service",
+  "jest": {
+    "verbose": true,
+    "setupFilesAfterEnv": [
+      "<rootDir>/client/test/enzymeSetup.js"
+    ]
+  },
+  "version": "1.0.0",
+  "description": "FEC service bookshelf",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start:dev": "nodemon server/index.js",
+    "build": "webpack --watch --config ./webpack.config.js --mode development",
+    "seed": "mysql -u root < schema.sql && node database/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrr37-hermes-4/hrr37-FEC-Ginger-service.git"
+  },
+  "author": "Ginger Barham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrr37-hermes-4/hrr37-FEC-Ginger-service/issues"
+  },
+  "homepage": "https://github.com/hrr37-hermes-4/hrr37-FEC-Ginger-service#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-styled-components": "^1.10.0",
+    "css-loader": "^2.1.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.7.1",
+    "jest-environment-enzyme": "^7.0.2",
+    "jest-enzyme": "^7.0.2",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "faker": "^4.1.0",
+    "jquery": "^3.3.1",
+    "mysql": "^2.16.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "react-star-rating-component": "^1.4.1",
+    "react-star-ratings": "^2.3.0",
+    "styled-components": "^4.2.0"
+  }
+}

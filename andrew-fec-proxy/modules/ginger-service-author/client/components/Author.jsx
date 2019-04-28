@@ -11,17 +11,25 @@ class Author extends React.Component {
   }
 
   componentDidMount() {
+console.log('author line 14')
     fetch(`/books/${this.props.bookId}/authors/title`)
       .then(res => res.json())
       .then((title) => {
+
         return fetch(`/books/${this.props.bookId}/authors/${title[0].author_id}`)
       })
       .then(res => res.json())
       .then((data) => {
+        console.log(data)
+        this.state.authors.push(data)
         this.setState({
-          authors: data,
-      });
+          authors:this.state.authors
+        })
+      //   this.setState({
+      //     authors: ['hi']
+      // });
     });
+console.log('line 28')
   }
 
   render() {

@@ -1,0 +1,27 @@
+config:
+  target: 'http://127.0.0.1:3000'
+  http:
+    timeout: 5
+  phases:
+    - duration : 10
+      arrivalRate: 1
+      name: "Minimal load, 1 RPS"
+    - duration : 30
+      arrivalRate: 100
+      name: "Medium load, 100 RPS"
+    # - duration : 30
+    #   arrivalRate: 300
+    #   name: "Heavy load, 300 RPS"
+  processor: './dataGenerate.js'
+
+scenarios:
+  - name: 'Update status'
+    flow:
+      - function: "generateBookId"
+      - function: "randomStatus"
+      - post:
+          url: '/books/{{id}}/authors/status'
+          json:
+            status: '{{status}}'
+      # - log: 'updated bookID {{id}} to status: {{status}}'
+

@@ -1,0 +1,28 @@
+config:
+  target: 'http://127.0.0.1:3000'
+  http:
+    timeout: 5
+  phases:
+    - duration : 10
+      arrivalRate: 1
+      name: "Minimal load, 1 RPS"
+    - duration : 30
+      arrivalRate: 100
+      name: "Medium load, 100 RPS"
+    - duration : 60
+      arrivalRate: 500
+      name: "Heavy load, 500 RPS"
+  processor: './dataGenerate.js'
+
+#Testing for random book ids generated from dataGenerate.js
+scenarios:
+    - flow:
+      - function: "generateBookId"
+      - get:
+          url: "/books/{{id}}"
+          # capture:
+          #   json: '$'
+          #   as: 'return'
+
+      - log: "retriveing {{id}} {{return}}"
+

@@ -13,11 +13,7 @@
     "test": "jest",
     "start:dev": "nodemon server/index.js",
     "build": "webpack --watch --config ./webpack.config.js --mode development",
-    "seed": "mysql -u root < schema.sql && node database/seed.js",
-    "psql:seed": "node database/psql.seed.js && psql -U postgres <psql.schema.sql && rm BooksData.csv AuthorData.csv",
-    "psql:schema": "psql -U postgres < psql.schema.sql",
-    "mongo:importauthors": "mongoimport -d bookshelf -c authors --type csv --file AuthorsData.csv --headerline",
-    "mongo:importbooks": "mongoimport -d bookshelf -c books --type csv --file BooksData.csv --headerline"
+    "seed": "mysql -u root < schema.sql && node database/seed.js"
   },
   "repository": {
     "type": "git",
@@ -56,22 +52,14 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "csv": "^5.1.1",
     "faker": "^4.1.0",
-    "fast-csv": "^2.4.1",
     "jquery": "^3.3.1",
-    "knex": "^0.16.5",
-    "mongodb": "^3.2.3",
-    "mongoose": "^5.5.2",
     "mysql": "^2.16.0",
-    "newrelic": "^5.7.0",
-    "pg": "^7.10.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-star-rating-component": "^1.4.1",
     "react-star-ratings": "^2.3.0",
-    "styled-components": "^4.2.0",
-    "writer": "^1.0.0"
+    "styled-components": "^4.2.0"
   }
 }

@@ -12,7 +12,7 @@ app.use('/books/:id', express.static(staticPath));
 
 app.use(
   '/books/:id/details',
-  proxy({ target: 'http://localhost:3001', changeOrigin: true }),
+  proxy({ target: 'http://ec2-18-217-132-223.us-east-2.compute.amazonaws.com:3001', changeOrigin: true }),
 );
 
 // hannah-service

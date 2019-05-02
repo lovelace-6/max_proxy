@@ -1,6 +1,6 @@
-var faker = require('faker');
+const faker = require('faker');
 
-var generateBookId = function(userContext,events,done){
+const generateBookId = function ( userContext, events, done){
 
   var id = faker.random.number({min:1, max:10000000})
   userContext.vars.id = id

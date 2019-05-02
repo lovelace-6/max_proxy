@@ -18,7 +18,7 @@ app.use(
 // hannah-service
 app.use(
   '/books/:id/reviews',
-  proxy({ target: 'http://localhost:3003', changeOrigin: true }),
+  proxy({ target: 'http://ec2-18-224-40-87.us-east-2.compute.amazonaws.com:3003', changeOrigin: true }),
 );
 
 // kaz-service
@@ -30,7 +30,7 @@ app.use(
 // ginger-service
 app.use(
   '/books/:id/authors',
-  proxy({ target: 'http://localhost:3000', changeOrigin: true }),
+  proxy({ target: 'http://ec2-13-59-83-138.us-east-2.compute.amazonaws.com:9000', changeOrigin: true }),
 );
 
 module.exports = app;

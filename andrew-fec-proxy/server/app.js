@@ -12,7 +12,7 @@ app.use('/books/:id', express.static(staticPath));
 
 app.get('/loaderio-c1334bff77c61b8c8dbfea55c32b77a7/',(req,res)=>{
   console.log('verification path hit')
-  var filePath = path.join(__dirname,'../loaderio-c1334bff77c61b8c8dbfea55c32b77a7/.txt')
+  var filePath = path.join(__dirname,'../loaderio-c1334bff77c61b8c8dbfea55c32b77a7.txt')
   res.sendFile(filePath)
 
 })

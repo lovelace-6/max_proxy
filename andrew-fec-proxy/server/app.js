@@ -10,6 +10,13 @@ app.use(morgan('dev'));
 const staticPath = `${__dirname}/../public`;
 app.use('/books/:id', express.static(staticPath));
 
+app.get('/loaderio-c1334bff77c61b8c8dbfea55c32b77a7/',(req,res)=>{
+  console.log('verification path hit')
+  var filePath = path.join(__dirname,'..//loaderio-c1334bff77c61b8c8dbfea55c32b77a7/.txt')
+  res.sendFile(filePath)
+
+})
+
 app.use(
   '/books/:id/details',
   proxy({ target: 'http://ec2-18-217-132-223.us-east-2.compute.amazonaws.com:3001', changeOrigin: true }),

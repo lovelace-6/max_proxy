@@ -1,3 +1,4 @@
+const nr = require('newrelic');
 const express = require('express');
 const morgan = require('morgan');
 const proxy = require('http-proxy-middleware');

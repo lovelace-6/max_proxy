@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const proxy = require('http-proxy-middleware');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 app.use(cors());

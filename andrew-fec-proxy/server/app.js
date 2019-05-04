@@ -11,9 +11,9 @@ app.use(morgan('dev'));
 const staticPath = `${__dirname}/../public`;
 app.use('/books/:id', express.static(staticPath));
 
-app.get('/loaderio-c1334bff77c61b8c8dbfea55c32b77a7/',(req,res)=>{
+app.get('/loaderio-87c610485dc09962027fb2d11ad3d44c/',(req,res)=>{
   console.log('verification path hit')
-  var filePath = path.join(__dirname,'../loaderio-c1334bff77c61b8c8dbfea55c32b77a7.txt')
+  var filePath = path.join(__dirname,'../loaderio-87c610485dc09962027fb2d11ad3d44c.txt')
   res.sendFile(filePath)
 
 })

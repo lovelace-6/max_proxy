@@ -17,15 +17,17 @@ app.get('/loaderio-c1334bff77c61b8c8dbfea55c32b77a7/',(req,res)=>{
 
 })
 
-app.use(
-  '/books/:id/details',
-  proxy({ target: 'http://ec2-18-217-132-223.us-east-2.compute.amazonaws.com:3001', changeOrigin: true }),
-);
+
 
 // hannah-service
 app.use(
   '/books/:id/reviews',
   proxy({ target: 'http://ec2-18-224-40-87.us-east-2.compute.amazonaws.com:3003', changeOrigin: true }),
+);
+
+app.use(
+  '/books/:id/details',
+  proxy({ target: 'http://ec2-18-217-132-223.us-east-2.compute.amazonaws.com:3001', changeOrigin: true }),
 );
 
 // kaz-service

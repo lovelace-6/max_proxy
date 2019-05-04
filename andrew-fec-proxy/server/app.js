@@ -18,6 +18,10 @@ app.get('/loaderio-c1334bff77c61b8c8dbfea55c32b77a7/',(req,res)=>{
 
 })
 
+app.get('/hi', (req,res)=>{
+  res.send('hi')
+})
+
 
 
 // hannah-service
